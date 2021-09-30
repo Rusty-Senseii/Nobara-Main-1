@@ -76,7 +76,7 @@ PM_START_TEXT = """
 """
 
 HELP_STRINGS = """
-Hey there, I'm Nobara Kugisaki!
+Hey there, I'm Daki!
 To make me functional, make sure that i have enough rights in your group.
 
 Helpful commands:
@@ -84,8 +84,7 @@ Helpful commands:
 - /help: Sends this message; I'll tell you more about myself!
 - /donate: Gives you info on how to support me and my creator.
 
-Join My Support If You Have Any Queries: @NobaraSupport
-
+Join My Support If You Have Any Queries: @DakiSupport
 All commands can be used with the following: / !
 List of all the Modules:
 """.format(
@@ -93,7 +92,7 @@ List of all the Modules:
     "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
 )
 
-EREN_IMG = "https://telegra.ph/file/8ab770904946c033f114e.jpg"
+EREN_IMG = "https://telegra.ph/file/29e965d262cae746c40fe.jpg"
 
 DONATE_STRING = """Durov Is my Cousin By The Way.."""
 
@@ -225,23 +224,23 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="🚦 ᴜᴘᴅᴀᴛᴇs 🚦",
-                                url="https://t.me/NobaraBotUpdates",
+                                url="https://t.me/DakiSupport",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text=" ᴡɪᴢᴀʀᴅ ",
-                                url="https://t.me/NobaraBotUpdates/5",
+                                url="https://t.me/DakiUpdates/5",
                             ),
                             InlineKeyboardButton(
                                 text="ɢʀᴏᴜᴘ",
-                                url="https://t.me/The_Phantom_Troupe/",
+                                url="https://t.me/Anime_dynasty/",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text="⚓️ ʜᴇʟᴘ ⚓️",
-                                url="https://t.me/Nobara_superbot?start=help",
+                                url="https://t.me/DakiRobot?start=help",
                             ),
                         ],
                     ],
@@ -249,7 +248,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "A jujutsu Sorcerer Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "Daki San Is Practicing her skills !\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
@@ -626,7 +625,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now Alive!](https://telegra.ph/file/b4be86f0b493954bfa5aa.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now Alive!](https://telegra.ph/file/4efdf3c2f5c9a2a32721c.jpg)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
@@ -667,7 +666,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Eren Jaeger is deployed successfully!")
+        LOGGER.info("Daki is deployed successfully!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
